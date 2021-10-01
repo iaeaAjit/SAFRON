@@ -11,6 +11,10 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule} from '@angular/material/menu';
 import { MenuItemComponent} from './core/components/header/menu-item/menu-item.component';
 import { ManageBannerComponent } from './modules/manage-banner/manage-banner.component';
+import { SubmitReportsComponent } from './modules/submit-reports/submit-reports.component';
+import { StatisticalReportsComponent } from './modules/statistical-reports/statistical-reports.component';
+import { DocumentsLinksComponent } from './modules/documents-links/documents-links.component';
+import { ProcessStepsComponent } from './modules/process-steps/process-steps.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { ManageBannerComponent } from './modules/manage-banner/manage-banner.com
     FooterComponent,
     SearchReportsComponent,
     MenuItemComponent,
-    ManageBannerComponent
+    ManageBannerComponent,
+    SubmitReportsComponent,
+    StatisticalReportsComponent,
+    DocumentsLinksComponent,
+    ProcessStepsComponent
   ],
   imports: [
     BrowserModule,

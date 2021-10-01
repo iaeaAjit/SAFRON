@@ -2,7 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './modules/home-page/home-page.component';
 import { ManageBannerComponent } from './modules/manage-banner/manage-banner.component';
-import { SearchReportsComponent } from './modules/search-reports/search-reports.component'
+import { SearchReportsComponent } from './modules/search-reports/search-reports.component';
+import { SubmitReportsComponent } from './modules/submit-reports/submit-reports.component';
+import { StatisticalReportsComponent } from './modules/statistical-reports/statistical-reports.component';
+import { ProcessStepsComponent } from './modules/process-steps/process-steps.component';
+import { DocumentsLinksComponent } from './modules/documents-links/documents-links.component';
 
 const routes: Routes = [
   {
@@ -32,8 +36,32 @@ const routes: Routes = [
     }
   },
   {
-    path: "**",
-    redirectTo: '/home'
+    path: "submitincident-report",
+    component: SubmitReportsComponent,
+    data: {
+      title: "Submit Reports page"
+    }
+  },
+  {
+    path: "statistical-report",
+    component: StatisticalReportsComponent,
+    data: {
+      title: "Statistical Reports page"
+    }
+  },
+  {
+    path: "process-steps",
+    component: ProcessStepsComponent,
+    data: {
+      title: "Process Steps page"
+    }
+  },
+  {
+    path: "documents-links",
+    component: DocumentsLinksComponent,
+    data: {
+      title: "Documents & Links page"
+    }
   }
 ];
 
