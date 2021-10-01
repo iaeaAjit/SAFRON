@@ -30,11 +30,11 @@ export class HeaderComponent implements OnInit {
     },
     {
       displayName: 'Documents & Links',
-      route: ''
+      route: 'documents-links'
     },
     {
       displayName: 'Process Steps',
-      route: ''
+      route: 'process-steps'
     },
     {
       displayName: 'Admin',
