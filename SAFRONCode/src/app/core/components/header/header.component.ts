@@ -41,7 +41,7 @@ export class HeaderComponent implements OnInit {
       children: [
         {
           displayName: 'Manage Banner',
-          route:''
+          route:'banner'
         },
         {
           displayName: 'Manage Latest Updates',
