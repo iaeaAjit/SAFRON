@@ -20,21 +20,21 @@ export class HeaderComponent implements OnInit {
       children: [
         {
           displayName: 'Search Reports',
-          route:''
+          route:'searchincident-report'
         },
         {
           displayName: 'Submit Reports',
-          route:''
+          route:'submitincident-report'
         }
       ]
     },
     {
       displayName: 'Documents & Links',
-      route: ''
+      route: 'documents-links'
     },
     {
       displayName: 'Process Steps',
-      route: ''
+      route: 'process-steps'
     },
     {
       displayName: 'Admin',

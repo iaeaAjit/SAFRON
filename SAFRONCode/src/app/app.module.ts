@@ -10,6 +10,10 @@ import { SearchReportsComponent } from './modules/search-reports/search-reports.
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule} from '@angular/material/menu';
 import { MenuItemComponent} from './core/components/header/header/menu-item/menu-item.component';
+import { SubmitReportsComponent } from './modules/submit-reports/submit-reports.component';
+import { StatisticalReportsComponent } from './modules/statistical-reports/statistical-reports.component';
+import { DocumentsLinksComponent } from './modules/documents-links/documents-links.component';
+import { ProcessStepsComponent } from './modules/process-steps/process-steps.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { MenuItemComponent} from './core/components/header/header/menu-item/menu
     HeaderComponent,
     FooterComponent,
     SearchReportsComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    SubmitReportsComponent,
+    StatisticalReportsComponent,
+    DocumentsLinksComponent,
+    ProcessStepsComponent
   ],
   imports: [
     BrowserModule,
