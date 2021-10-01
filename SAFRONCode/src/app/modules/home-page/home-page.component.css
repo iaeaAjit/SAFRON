@@ -1,0 +1,152 @@
+/* Banner CSS */
+
+
+.slider-section{
+    background: transparent linear-gradient(180deg, #3366CC 0%, #517DD4 100%) 0% 0% no-repeat padding-box;
+    opacity: 1; 
+    height: 458px;
+}
+
+.img-bg-one{
+    /* background: transparent url('/assets/Images/Group 135.png') 0% 0% no-repeat padding-box; */
+    background: transparent url('/assets/Images/Banner-bg.png');
+    opacity: 0.2; 
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 420px; z-index:-1;
+}
+.img-bg-two{
+    background: transparent url('/assets/Images/Group 1034.png') 0% 0% no-repeat padding-box;
+    opacity: 0.2; 
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 420px; z-index: 1;
+}
+.image-h-w {
+    width: 100%; 
+    height: 330px;
+}
+.carousel-indicators {
+    margin-left: 0% !important;
+    display: block;
+    bottom: 0%;
+    padding: 5px;
+    outline: blue;
+}
+
+.carousel-indicators .active {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+   box-shadow: 0px 0px 0px 3px #c1c1c1;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {  
+
+    .image-h-w {
+        width: 60%; 
+        height: 180px;
+    }
+    .carousel-indicators {
+        margin-left: 0% !important;
+        display: block;
+        bottom: 0%;
+    }
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border: none !important;
+    border-radius: 20px !important;
+}
+.slider-padding{
+   height:60%;
+}
+.carousel-height{
+    height: 350px;
+}
+
+/* Quick action CSS */
+
+.quick-action-title{
+    text-align: left;
+    /* font: normal normal bold 25px/30px Helvetica Neue; */
+    letter-spacing: 0px;
+    color: #3561CE;
+    opacity: 1;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.quick-action{
+    text-align: center;
+    /* font: normal normal normal 16px/22px Helvetica Neue; */
+    letter-spacing: 0px;
+    color: #333333;
+    text-decoration: none;
+    opacity: 1;
+    font-weight: 400;
+}
+.img-action{
+    height: 54px;
+    width: 54px;
+}
+.panel-border{
+    border-radius: 10px; 
+    position: relative; 
+    top: -40px;
+}
+.panel-body a {
+    text-decoration: none;
+}
+
+/* About SAFRON CSS */
+
+.saf-view-all{
+    background: #F8F9FC 0% 0% no-repeat padding-box;
+    border: 1px solid #EBEBEB;
+    border-radius: 30px;
+    opacity: 1;
+}
+
+/* Latest Updates CSS  */
+
+.letest-update-title{
+    text-align: left;
+    /* font: normal normal bold 25px/30px Helvetica Neue; */
+    letter-spacing: 0px;
+    color: #3561CE;
+    opacity: 1;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.saf-view-all-updates{
+    background: #F8F9FC 0% 0% no-repeat padding-box;
+    border: 1px solid #EBEBEB;
+    border-radius: 30px;
+    opacity: 1;
+}
+
+/* Featured section CSS */
+
+.bg-feature{
+    background: #F3F8FF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.feature-title{
+    text-align: left;
+    /* font: normal normal bold 25px/30px Helvetica Neue; */
+    letter-spacing: 0px;
+    color: #3561CE;
+    opacity: 1;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.feature-subtitle{
+    text-align: left;
+    /* font: normal normal bold 22px/32px Helvetica Neue; */
+    letter-spacing: 0px;
+    color: #333333;
+    opacity: 1;
+}
