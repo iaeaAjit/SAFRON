@@ -8,8 +8,8 @@
 }
 
 .img-bg-one{
-    /* background: transparent url('/assets/Images/Group 135.png') 0% 0% no-repeat padding-box; */
-    background: transparent url('/assets/Images/Banner-bg.png');
+    /* background: transparent url('/assets/images/Group 135.png') 0% 0% no-repeat padding-box; */
+    background: transparent url('/assets/images/Banner-bg.png');
     opacity: 0.2; 
     position: absolute;
     left: 0px;
@@ -17,7 +17,7 @@
     height: 420px; z-index:-1;
 }
 .img-bg-two{
-    background: transparent url('/assets/Images/Group 1034.png') 0% 0% no-repeat padding-box;
+    background: transparent url('/assets/images/Group 1034.png') 0% 0% no-repeat padding-box;
     opacity: 0.2; 
     position: absolute;
     left: 0px;

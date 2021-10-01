@@ -10,6 +10,11 @@ import { DocumentsLinksComponent } from './modules/documents-links/documents-lin
 const routes: Routes = [
   {
     path: "",
+    redirectTo: '/home',
+    pathMatch:'full'
+  },
+  {
+    path: "home",
     component: HomePageComponent,
     data: {
       title: "Home page"
