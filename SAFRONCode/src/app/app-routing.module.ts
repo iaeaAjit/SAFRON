@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './modules/home-page/home-page.component';
+import { ManageBannerComponent } from './modules/manage-banner/manage-banner.component';
 import { SearchReportsComponent } from './modules/search-reports/search-reports.component'
 
 const routes: Routes = [
@@ -14,6 +15,13 @@ const routes: Routes = [
     component: HomePageComponent,
     data: {
       title: "Home page"
+    }
+  },
+  {
+    path: "banner",
+    component: ManageBannerComponent,
+    data: {
+      title: "Manage Banner page"
     }
   },
   {

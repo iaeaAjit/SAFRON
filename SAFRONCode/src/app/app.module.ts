@@ -10,6 +10,7 @@ import { SearchReportsComponent } from './modules/search-reports/search-reports.
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule} from '@angular/material/menu';
 import { MenuItemComponent} from './core/components/header/menu-item/menu-item.component';
+import { ManageBannerComponent } from './modules/manage-banner/manage-banner.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MenuItemComponent} from './core/components/header/menu-item/menu-item.c
     HeaderComponent,
     FooterComponent,
     SearchReportsComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    ManageBannerComponent
   ],
   imports: [
     BrowserModule,
