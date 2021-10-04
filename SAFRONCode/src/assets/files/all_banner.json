@@ -1,0 +1,18 @@
+[
+    {
+        "Id": 1,
+        "Title": "Banner1 Safron use of radiation in radiotherapy through learning and reporting",
+        "Description": "Description1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias error temporibus adipisci explicabo natus eligendi?",
+        "ImageFileName": "img1.png",
+        "SortOrder": 1,
+        "URL": "assets/img1.png"
+    },
+    {
+        "Id": 2,
+        "Title": "Banner2 Safron provieds you with",
+        "Description": "Description2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias error temporibus adipisci explicabo natus eligendi?",
+        "ImageFileName": "img2.png",
+        "SortOrder": 2,
+        "URL": "assets/img2.png"
+    }
+]

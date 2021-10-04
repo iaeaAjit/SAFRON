@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { SubmitReportsComponent } from './modules/submit-reports/submit-reports.
 import { StatisticalReportsComponent } from './modules/statistical-reports/statistical-reports.component';
 import { DocumentsLinksComponent } from './modules/documents-links/documents-links.component';
 import { ProcessStepsComponent } from './modules/process-steps/process-steps.component';
+import { AddBannerComponent } from './modules/add-banner/add-banner.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,15 @@ import { ProcessStepsComponent } from './modules/process-steps/process-steps.com
     SubmitReportsComponent,
     StatisticalReportsComponent,
     DocumentsLinksComponent,
-    ProcessStepsComponent
+    ProcessStepsComponent,
+    AddBannerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

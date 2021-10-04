@@ -3,7 +3,7 @@
     <p class="text-center banner-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, dolore!</p>
 
     <div class="row justify-content-end pe-sm-3">
-        <a href="/banner" class="btn btn-outline-primary btn-sm w-auto me-3">
+        <a routerLink="/banner/add" class="btn btn-outline-primary btn-sm w-auto me-3">
             <i class="fa fa-plus-square-o"> Add Banner</i>
         </a>
     </div>
@@ -18,13 +18,12 @@
                 </tr>
             </thead>
             <tbody class="">
-                <tr>
-                    <td class="col-3"> Safron use of radiation in radiotherapy through learning and reporting</td>
-                    <td class="col-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias error temporibus
-                        adipisci explicabo natus eligendi?</td>
-                    <td class="col-auto text-center">1</td>
+                <tr *ngFor="let banner of all_banners">
+                    <td class="col-3">{{banner.Title}}</td>
+                    <td class="col-4">{{banner.Description}}</td>
+                    <td class="col-auto text-center">{{banner.SortOrder}}</td>
                     <td class="col-2 text-center">
-                        <a href="/banner">
+                        <a routerLink="/banner/edit">
                             <span class="badge bg-action-icon rounded-pill m-2">
                                 <i class="fa fa-pencil-square-o text-primary icon-size"></i>
                             </span>
@@ -36,7 +35,7 @@
                         </a>
                     </td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td class="col-3"> Safron provieds you with</td>
                     <td class="col-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias error temporibus
                         adipisci explicabo natus eligendi?</td>
@@ -89,7 +88,7 @@
                             </span>
                         </a>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </div>
