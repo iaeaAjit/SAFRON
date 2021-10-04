@@ -9,11 +9,14 @@ import { FooterComponent } from './core/components/footer/footer.component';
 import { SearchReportsComponent } from './modules/search-reports/search-reports.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule} from '@angular/material/menu';
-import { MenuItemComponent} from './core/components/header/header/menu-item/menu-item.component';
+import { MenuItemComponent} from './core/components/header/menu-item/menu-item.component';
 import { SubmitReportsComponent } from './modules/submit-reports/submit-reports.component';
 import { StatisticalReportsComponent } from './modules/statistical-reports/statistical-reports.component';
 import { DocumentsLinksComponent } from './modules/documents-links/documents-links.component';
 import { ProcessStepsComponent } from './modules/process-steps/process-steps.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,9 +35,22 @@ import { ProcessStepsComponent } from './modules/process-steps/process-steps.com
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
