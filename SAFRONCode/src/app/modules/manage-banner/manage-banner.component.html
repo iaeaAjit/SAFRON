@@ -1,0 +1,98 @@
+<div class="container">
+    <h5 class="text-center manage-banner-title mt-4">Manage Banner</h5>
+    <p class="text-center banner-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, dolore!</p>
+
+    <div class="row justify-content-end pe-sm-3">
+        <a routerLink="/banner/add" class="btn btn-outline-primary btn-sm w-auto me-3">
+            <i class="fa fa-plus-square-o"> Add Banner</i>
+        </a>
+    </div>
+    <div class="row panel panel-body shadow-sm mt-4 table-responsive border-radius-5">
+        <table class="table">
+            <thead class="bg-primary bg-opacity-25">
+                <tr class="border-0 border-hidden">
+                    <th scope="col" class="col-3">Title</th>
+                    <th scope="col" class="col-4">Description</th>
+                    <th scope="col" class="col-auto text-center">Display order</th>
+                    <th scope="col" class="col-2 text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody class="">
+                <tr *ngFor="let banner of all_banners">
+                    <td class="col-3">{{banner.Title}}</td>
+                    <td class="col-4">{{banner.Description}}</td>
+                    <td class="col-auto text-center">{{banner.SortOrder}}</td>
+                    <td class="col-2 text-center">
+                        <a routerLink="/banner/edit">
+                            <span class="badge bg-action-icon rounded-pill m-2">
+                                <i class="fa fa-pencil-square-o text-primary icon-size"></i>
+                            </span>
+                        </a>
+                        <a href="">
+                            <span class="badge bg-action-icon rounded-pill m-2">
+                                <i class="fa fa-trash-o text-primary icon-size"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td class="col-3"> Safron provieds you with</td>
+                    <td class="col-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias error temporibus
+                        adipisci explicabo natus eligendi?</td>
+                    <td class="col-auto text-center">2</td>
+                    <td class="col-2 text-center">
+                        <a href="/banner">
+                            <span class="badge bg-action-icon rounded-pill m-2">
+                                <i class="fa fa-pencil-square-o text-primary icon-size"></i>
+                            </span>
+                        </a>
+                        <a href="">
+                            <span class="badge bg-action-icon rounded-pill m-2">
+                                <i class="fa fa-trash-o text-primary icon-size"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-3"> Implimenting Bonn call for Action no. 7</td>
+                    <td class="col-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias error temporibus
+                        adipisci explicabo natus eligendi?</td>
+                    <td class="col-auto text-center">3</td>
+                    <td class="col-2 text-center">
+                        <a href="/banner">
+                            <span class="badge bg-action-icon rounded-pill m-2">
+                                <i class="fa fa-pencil-square-o text-primary icon-size"></i>
+                            </span>
+                        </a>
+                        <a href="">
+                            <span class="badge bg-action-icon rounded-pill m-2">
+                                <i class="fa fa-trash-o text-primary icon-size"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-3"> IAEA launches new e-learning on safety and quality in radiotherapy</td>
+                    <td class="col-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias error temporibus
+                        adipisci explicabo natus eligendi?</td>
+                    <td class="col-auto text-center">4</td>
+                    <td class="col-2 text-center">
+                        <a href="/banner">
+                            <span class="badge bg-action-icon rounded-pill m-2">
+                                <i class="fa fa-pencil-square-o text-primary icon-size"></i>
+                            </span>
+                        </a>
+                        <a href="">
+                            <span class="badge bg-action-icon rounded-pill m-2">
+                                <i class="fa fa-trash-o text-primary icon-size"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<!-- <app-breadcrumb></app-breadcrumb> -->

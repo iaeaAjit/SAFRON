@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './modules/home-page/home-page.component';
+import { ManageBannerComponent } from './modules/manage-banner/manage-banner.component';
+import { AddBannerComponent } from './modules/add-banner/add-banner.component';
 import { SearchReportsComponent } from './modules/search-reports/search-reports.component';
 import { SubmitReportsComponent } from './modules/submit-reports/submit-reports.component';
 import { StatisticalReportsComponent } from './modules/statistical-reports/statistical-reports.component';
@@ -18,6 +20,27 @@ const routes: Routes = [
     component: HomePageComponent,
     data: {
       title: "Home page"
+    }
+  },
+  {
+    path: "banner",
+    component: ManageBannerComponent,
+    data: {
+      title: "Manage Banner page"
+    }
+  },
+  {
+    path:'banner/add',
+    component: AddBannerComponent,
+    data: {
+      title: "Add Banner page"
+    }
+  },
+  {
+    path:'banner/edit',
+    component: AddBannerComponent,
+    data: {
+      title: "Edit Banner page"
     }
   },
   {
