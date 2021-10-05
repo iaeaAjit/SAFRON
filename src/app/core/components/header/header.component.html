@@ -1,0 +1,125 @@
+<!-- Header bar -->
+
+
+<header class="bg-header">
+    <div class="navbar navbar-expand-lg p-0 header-custom">
+        <div class="container-fluid">
+            <span class="topbar-li"> IAEA.org &nbsp; &nbsp;  &nbsp;NUCLEUS</span>
+            <div class="d-flex">
+                <div class="row">
+                    <div class="col-auto" >
+                        <div class="dropdown z-index-1099">
+                            <button class="btn btn-primary dropdown-toggle btn-sm safron-language-select border-0" type="button" id="language" data-bs-toggle="dropdown" aria-expanded="false">
+                              English
+                            </button>
+                            <ul class="dropdown-menu z-index-1099" aria-labelledby="language">
+                                <li><a class="dropdown-item"  (click)="onLangChange('en')">English</a></li>
+                                <li><a class="dropdown-item"  (click)="onLangChange('es')">Spanish</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="col-auto">
+                        <span class="navbar-text topbar-li">
+                            PATIL, Shrikant
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid custom-fluid">
+        <div class="row pb-2 pt-2">
+            <div class="col-auto pe-0 z-index-1000">
+                <a class="navbar-brand">
+                    <img src="\assets\images\Group 1139.svg" class="img-fluid mx-auto" alt="Safron name"/>
+                    <img src="\assets\images\Rectangle 2.svg" class="img-fluid mx-auto px-3" alt="Safron name"/>
+                    <img src="\assets\images\SAFRON.svg" class="img-fluid mx-auto custom-padding-img" alt="Safron name"/>
+                </a>
+            </div>
+            <div  class="col-auto ps-0 z-index-1000"> 
+                <p class="header-slogan custom-padding"> {{'Safety Reporting and Learning' | translate}} <br class="d-xs-none">{{'System for Radiotherapy' | translate}}</p>
+            </div>
+        </div>
+        
+    </div>
+    <img src="\assets\images\download.png" class="flag-bg img-fluid" alt="">
+</header>
+
+
+<!-- Top navbar  -->
+
+<nav class="navbar navbar-expand-md navbar-dark p-0 navbar-bg">
+    <div class="container-fluid">
+        <button class="navbar-toggler m-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0 saf-navbar">
+                <li class="nav-item p-1">
+                    <a class="nav-link text-white active" aria-current="page" href="/home">{{'Home' | translate}}</a>
+                </li>
+                <li class="nav-item p-1 dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="dropdown03" data-bs-toggle="dropdown"
+                        aria-expanded="false">{{'Reports' | translate}}</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                        <li><a class="dropdown-item" href="/searchincident-report">{{'Incident Reports' | translate}}</a></li>
+                        <li><a class="dropdown-item" href="/submitincident-report">{{'Statistical Reports' | translate}}</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item p-1">
+                    <a class="nav-link text-white" href="/documents-links">{{'Documents & Links' | translate}}</a>
+                </li>
+                <li class="nav-item p-1">
+                    <a class="nav-link text-white" href="/process-steps">{{'Process Steps' | translate}}</a>
+                </li>
+                <li class="nav-item p-1 dropdown">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="dropdown02" data-bs-toggle="dropdown"
+                        aria-expanded="false">{{'Admin' | translate}}</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown02">
+                        <li><a class="dropdown-item" href="/manage-banner">{{'Manage Banner' | translate}}</a></li>
+                        <li><a class="dropdown-item" href="/manage-update">{{'Manage Letest Update' | translate}}</a></li>
+                        <li><a class="dropdown-item" href="#">{{'Manage Registration' | translate}}</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item p-1">
+                    <a class="nav-link text-white" href="#">{{'Help' | translate}}</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <a class="nav-link text-white register" href="#" >{{'Register' | translate}}</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- {{'home' | translate}} -->
+<!-- <nav class="navbar navbar-expand-md navbar-dark p-0 navbar-bg">
+    <div class="container-fluid">
+        <button class="navbar-toggler m-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0 saf-navbar">
+                <span class="nav-item p-2 text-white" *ngFor="let item of navItems">
+                    <span *ngIf="item.children && item.children.length > 0">
+                      <button class="border-0 navbar-bg text-white" mat-raised-button color="primary" [matMenuTriggerFor]="menu.childMenu">
+                        {{item.displayName | translate}}
+                      </button>
+                      <app-menu-item #menu [items]="item.children"></app-menu-item>
+                    </span>
+                    <span *ngIf="!item.children || item.children.length === 0">
+                      <button class="border-0 navbar-bg text-white" mat-button color="primary" [routerLink]="item.route">
+                        {{item.displayName | translate}}
+                      </button>
+                    </span>
+                  </span>
+            </ul>
+            <div class="d-flex">
+                <a class="nav-link text-white register" href="#" >Register</a>
+            </div>
+        </div>
+    </div>
+</nav> -->
+

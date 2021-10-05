@@ -1,0 +1,320 @@
+
+<div class="container">
+    <h5 class="text-center incident-report-title mt-4">Search for Incident Reports</h5>
+    <div class="row">
+        <p class="text-center search-p">You can search own/all incident reports by process step, who and how the incident was discovered, specific words in the free text fields, or a combination of these parameters
+        </p>
+        <div class="row justify-content-end mt-2 mb-2">
+            <button class="btn btn-outline-primary btn-sm w-auto"> <i class="fa fa-file-text-o text-primary p-1 doc-icon"></i> Submit incident Report</button>
+        </div>
+
+        <p class="search-para">Please choose your preferred dataset, based on this selection, you can browse your own or all incident reports.</p>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <label for="" class="form-label"> <strong> Select database</strong></label>
+                <select name="" id="" class="form-select form-select-sm"> 
+                    <option value="">All incident reports</option>
+                    <option value="">My incident reports</option>
+                </select>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <label for="" class="form-label"> <strong> Treatment modality</strong></label>
+                <select name="" id="" class="form-select form-select-sm"> 
+                    <option value="">External Beam therapy</option>
+                    <option value="">Monitoring and Assessment</option>
+                    <option value="">Intervation or Hospitalization</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mt-3 mb-5">
+            <div [ngClass]="status ? 'col col-lg-1' : 'col-lg-4'">
+                <div [ngClass]="status ? 'hideContent' : 'showContent'" class="panel panel-default mb-3 shadow-sm">
+                    <div class="panel-heading bg-primary bg-opacity-25 p-2">
+                        <h6 class="panel-title m-0"> 
+                             Advanced Filter
+                            <a class="float-end cursor-pointer d-none d-sm-block me-3" (click)="clickEvent()"> <i class="fa fa-angle-double-left"></i></a>
+                            <a class="float-end cursor-pointer d-block d-sm-none me-3" (click)="xsEvent()"> <i class="fa fa-angle-double-down"></i></a>
+                        </h6>
+                    </div>
+                    <div class="panel-body p-3 shadow-sm" [ngClass]="mStatus ? 'hideContent' : ' showContent'">
+                        <div class="row">
+                            <form action="">
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">what phase is a incident asociated with</label>
+                                        <div class="input-group">
+                                            <select name="" id="" class="form-select form-select-sm">
+                                                <option value=""> -- Select -- </option>
+                                            </select>
+                                            <i class="fa fa-pencil-square-o text-primary ps-3 pt-2 pe-1"></i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">who discovered the incident ?</label>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value=""> -- Select -- </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">how was the incident discovered ?</label>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value=""> -- Select -- </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">Any word in the free text field</label>
+                                        <input type="text" name="" id="" class="form-control form-control-sm">
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">Clinical incident severity</label>
+                                        <div class="input-group">
+                                            <select name="" id="" class="form-select form-select-sm">
+                                                <option value=""> -- Select -- </option>
+                                            </select>
+                                            <!-- Button trigger modal -->
+                                            <a data-bs-toggle="modal" class="cursor-pointer" data-bs-target="#severityHelp">
+                                                <i class="fa fa-question-circle text-primary ps-3 pt-2 pe-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">Did the incident reach the patient</label>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value=""> -- Select -- </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label w-100">Did the incident reach the patient</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckboxyes" value="option1">
+                                            <label class="form-check-label" for="inlineCheckboxyes">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckboxno" value="option2">
+                                            <label class="form-check-label" for="inlineCheckboxno">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">Was any one affected by the incident ?</label>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value=""> -- Select -- </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">Was prescribed treatment delivered incorrectly?  </label>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value=""> -- Select -- </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">Discribe the causes of the incident </label>
+
+                                        <div class="input-group">
+                                            <select name="" id="" class="form-select form-select-sm">
+                                                <option value=""> -- Select -- </option>
+                                            </select>
+                                            <i class="fa fa-pencil-square-o text-primary ps-3 pt-2 pe-1"></i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">Start date of discovery </label>
+                                        <input type="date" name="" id="" class="form-control form-control-sm">
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">End date of discovery </label>
+                                        <input type="date" name="" id="" class="form-control form-control-sm">
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">What safety barrier failed to identify the incident?</label>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value=""> -- Select -- </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">What safety barrier identify the incident? </label>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value=""> -- Select -- </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">What safety barrier might have identify the incident? </label>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value=""> -- Select -- </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label w-100">Is risk assessment complete? </label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="riskCheckboxyes" value="option1">
+                                            <label class="form-check-label" for="riskCheckboxyes">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="riskCheckboxno" value="option2">
+                                            <label class="form-check-label" for="riskCheckboxno">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">Equipment used</label>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value=""> -- Select -- </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label">Treatment method </label>
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option value=""> -- Select -- </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="" class="form-label w-100">First day of treatment</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="firstDayCheckboxYes" value="option1">
+                                            <label class="form-check-label" for="riskCheckboxyes">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="firstDayCheckboxNo" value="option2">
+                                            <label class="form-check-label" for="riskCheckboxno">No</label>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group justify-content-end">
+                                        <button type="button" class="btn btn-sm w-25 btn-secondary me-3">Reset</button>
+                                        <button type="button" class="btn btn-sm w-25 btn-primary">Search</button>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div [ngClass]="status ? 'showContent' : 'hideContent'" class="panel panel-default mb-3 ms-1 me-1 shadow-sm"  >
+                    <div class="panel-heading bg-primary bg-opacity-25 p-2">
+                        <h6 class="panel-title m-0 text-center"> 
+                            <a (click)="clickEvent()" class="cursor-pointer"> <i class="fa fa-angle-double-right text-primary"></i></a>
+                        </h6>
+                    </div>
+                    <div class="panel-body p-2 shadow-sm panel-body-height">
+                        <p class="vertical-text m-0"> Advanced Filter</p>
+                    </div>
+                </div>
+            </div>
+            <div [ngClass]="status ? 'col col-lg-11' : 'col-lg-8'">
+                <div class="panel panel-default shadow-sm mb-3">
+                    <div class="panel-heading bg-primary bg-opacity-25 p-2">
+                        <h6 class="panel-title m-0">Incident Headline
+                            <a class="float-end me-2 text-secondary">Action</a>
+                        </h6>
+                    </div>
+                    <div class="panel-body p-1">
+                        <ul class="list-group  list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let headline of Headlines;">
+                                <div class="ms-2 me-auto">
+                                   {{ headline.name}} 
+                                </div>
+                                <a href="#"><span class="badge bg-eyes rounded-pill"><i class="fa fa-eye text-primary"></i></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer p-3">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-xl-6 col-sm-12">
+                                <label class="float-start p-2 footer-count-text-size"> Total search result count: 66 </label>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-xl-6 col-sm-12">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-end footer-count-text-size">
+                                        <li class="page-item" >
+                                            <a class="page-link border-0 text-black" href="#" aria-label="Previous">
+                                                <span aria-hidden="true"  class="footer-count-text-size"><i class="fa fa-angle-left me-2"></i> Pre</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link border-0 text-black" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link border-0 text-black" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link border-0 text-black" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link border-0 text-black" href="#" aria-label="Next">
+                                                <span aria-hidden="true" class="footer-count-text-size">Next <i class="fa fa-angle-right ms-2"></i></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                  </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="severityHelp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary bg-opacity-25 d-block">
+                            <h5 class="modal-title text-dark w-100" id="staticBackdropLabel">Incident Severity Help</h5>
+                            <p class="w-100 m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, velit.</p>
+                            <button type="button" class="modal-btn-close" data-bs-dismiss="modal" aria-label="Close"> <i class="fa fa-times" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="modal-body ps-5 pe-5">
+                            <div class="row">
+                                <ul class="list-unstyled">
+                                    <li><strong> Minor incident</strong>
+                                        <ol>
+                                            <li>Dose variation from prescribed total dose of < 5%</li>
+                                            <li>Near miss or unsafe condition which could potentially cause a treatment error</li>
+                                            <li>Patient complaint</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li> <strong> Potential serious incident</strong>
+                                        <ol>
+                                            <li>A near miss that could have been a serious incident</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li> <strong> Serious incident</strong>
+                                        <ol>
+                                            <li>Dose variation from prescribed total dose of 5 - 10 %</li>
+                                            <li>Radiation dose or medication error causing side effect requiring minour treatment or ongoing monitoring and assessment </li>
+                                            <li>Setup veriation > 1cm - no critical structures included</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li> <strong> Potential major incident</strong>
+                                        <ol>
+                                            <li>A near miss that could have been a major incident</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li> <strong> Major incident</strong>
+                                        <ol>
+                                            <li>Dose variation from prescribed total dose of 10 - 20%</li>
+                                            <li>Radiation dose or medication error causing side effects requiring major treatment and intervation or hospitalization</li>
+                                            <li>Set up variation that will/could impact on normal tissue(e.g heart, lung, eyes, kidney etc.) </li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li> <strong> Critical incident</strong>
+                                        <ol>
+                                            <li>Radiation dose or medication error causing death or disability </li>
+                                            <li>Dose variation from prescribed total dose of >20% </li>
+                                            <li>Completely incorrect volume </li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+        </div>
+    </div>
+</div>
+<!-- <app-breadcrumb></app-breadcrumb> -->
+
+
+
+
+

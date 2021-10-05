@@ -1,0 +1,49 @@
+.manage-banner-title{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #3366CC;
+    opacity: 1;
+}
+.banner-p{
+    text-align: center;
+    /* font: normal normal normal 19px/23px Helvetica Neue; */
+    letter-spacing: 0px;
+    color: #4B4B4B;
+    opacity: 1;
+    font-size: large;
+}
+
+.bg-action-icon{
+    background: #E5E5E5 0% 0% no-repeat padding-box;
+    padding: 6px 7px;
+}
+.icon-size{
+    font-size: 16px;
+    /* font-weight: 600; */
+}
+th{
+    font-weight: 500;
+}
+.modal-btn-close{
+    position: absolute;
+    top: -2%;
+    right: -1%;
+    border: 2px solid #fff;
+    border-radius: 35px;
+    background-color: #000;
+}
+.modal-btn-close > i{
+    font-size: 19px;
+    color: #fff;
+}
+.border-radius-5{
+    border-radius: 5px;
+}
+.thead-border{
+    border-bottom:1px solid #c1c1c1 !important;
+}
+.border-hidden{
+    border-style: hidden !important;
+}
