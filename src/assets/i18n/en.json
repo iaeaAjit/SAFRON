@@ -2,6 +2,7 @@
     "Safety Reporting and Learning": "Safety Reporting and Learning",
     "System for Radiotherapy": "System for Radiotherapy",
     "Home": "Home",
+    "Reports": "Reports",
     "Incident Reports": "Incident Report",
     "Statistical Reports": "Statistical Reports",
     "Documents & Links": "Documents & Links",
@@ -22,5 +23,17 @@
     "Download Reports": "Download Reports",
     "Latest Updates": "Latest Updates",
     "View all updates": "View all updates",
-    "Featured Reports, Documents & Links": "Featured Reports, Documents & Links"
+    "Featured Reports, Documents & Links": "Featured Reports, Documents & Links",
+    "Featured Incident Reports": "Featured Incident Reports",
+    "Featured Documents & Links": "Featured Documents & Links",
+    "Read more": "Read more",
+    "International Atomic Energy Agency (IAEA)": "International Atomic Energy Agency (IAEA)",
+    "Vienna International Centre, PO Box 100, A-1400 Vienna, Austria":"Vienna International Centre, PO Box 100, A-1400 Vienna, Austria",
+    "Telephone": "Telephone",
+    "E-mail": "E-mail",
+    "Facsimile": "Facsimile",
+    "Contact us":"Contact us",
+    "Disclaimer": "Disclaimer",
+    "Copyright © 2021 International Atomic Energy Agency (IAEA). All rights reserved": "Copyright © 2021 International Atomic Energy Agency (IAEA). All rights reserved",
+    "Version": "Version"
 }

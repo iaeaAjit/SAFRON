@@ -59,7 +59,7 @@ export class HeaderComponent implements OnInit {
   //     route: ''
   //   },
   // ];
-
+  selectedlanguage: any = "en"
   constructor(public translate: TranslateService) { 
     translate.addLangs(['en', 'es']);
     translate.setDefaultLang('en');
@@ -71,6 +71,7 @@ export class HeaderComponent implements OnInit {
   
   onLangChange(lang:any){
     console.log(lang)
+    this.selectedlanguage = lang
     this.translate.use(lang);
   }
 

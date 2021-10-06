@@ -10,7 +10,7 @@
                     <div class="col-auto" >
                         <div class="dropdown z-index-1099">
                             <button class="btn btn-primary dropdown-toggle btn-sm safron-language-select border-0" type="button" id="language" data-bs-toggle="dropdown" aria-expanded="false">
-                              English
+                                {{selectedlanguage === 'en' ? 'English' : 'Spanish'}}
                             </button>
                             <ul class="dropdown-menu z-index-1099" aria-labelledby="language">
                                 <li><a class="dropdown-item"  (click)="onLangChange('en')">English</a></li>

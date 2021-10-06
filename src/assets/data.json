@@ -21,5 +21,13 @@
     "latestUpdate3":"Check, review & report With help of us",
     "latestUpdate3Details":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, et.",
     "latestUpdate4":"E-learning on Safety & Quality in Radiotherapy",
-    "latestUpdate4Details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, odio?"
+    "latestUpdate4Details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, odio?",
+    "featuredIncidentText":"Orthovoltage equipment not properly calibrated",
+    "featuredIncidentTextDescription":"Orthovoltage equipment transferred from one location to another. After relocation, commissioning, and use the errors in calibration of the unit were discovered. Incorrect orthovoltage output tables.",
+    "hdrtext":"HDR vaginal cylinder brachytherapy treatment delivered to incorrect location",
+    "hdrtextDescription":"Patient received first of three intended deliveries of HDR vaginal cylinder brachytherapy on 6/19/2014. After the vaginal cylinder was inserted, a planar digital x-ray image of the placement was.",
+    "featureHeading":"Report No. 167- Guidelines by the AAPM and GEC-ESTRO",
+    "featureHeadingTranscription":"Although a multicenter, Phase III, prospective, randomized trial is the gold standard for evidence based medicine, it is rarely used in the evaluation of innovative devices because of many practical.",
+    "icprheading":"ICRP Publication 97, Prevention of High-dose-rate Brachytherapy",
+    "icprheadingDescription":"Abstract - High-dose-rate (HDR) brachytherapy is a rapidly growing technique that has been replacing low-dose-rate (LDR) procedures over the last few years in both industrialised and developing."
 }
