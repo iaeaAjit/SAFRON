@@ -24,10 +24,6 @@ const routes: Routes = [
     }
   },
   {
-    path: 'banner',
-    loadChildren: () => import('./modules/banner/banner.module').then(m => m.BannerModule)
-  },
-  /* {
     path: "banner",
     component: ManageBannerComponent,
     data: {
@@ -47,7 +43,7 @@ const routes: Routes = [
     data: {
       title: "Edit Banner page"
     }
-  }, */
+  },
   {
     path: "searchincident-report",
     component: SearchReportsComponent,

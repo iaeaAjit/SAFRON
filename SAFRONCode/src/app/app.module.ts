@@ -11,8 +11,8 @@ import { SearchReportsComponent } from './modules/search-reports/search-reports.
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule} from '@angular/material/menu';
 import { MenuItemComponent} from './core/components/header/menu-item/menu-item.component';
-/* import { ManageBannerComponent } from './modules/manage-banner/manage-banner.component';
-import { AddBannerComponent } from './modules/add-banner/add-banner.component'; */
+import { ManageBannerComponent } from './modules/manage-banner/manage-banner.component';
+import { AddBannerComponent } from './modules/add-banner/add-banner.component';
 import { SubmitReportsComponent } from './modules/submit-reports/submit-reports.component';
 import { StatisticalReportsComponent } from './modules/statistical-reports/statistical-reports.component';
 import { DocumentsLinksComponent } from './modules/documents-links/documents-links.component';
@@ -20,7 +20,6 @@ import { ProcessStepsComponent } from './modules/process-steps/process-steps.com
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {ReactiveFormsModule} from '@angular/forms';
-import { BannerModule } from './modules/banner/banner.module';
 
 @NgModule({
   declarations: [
@@ -30,8 +29,8 @@ import { BannerModule } from './modules/banner/banner.module';
     FooterComponent,
     SearchReportsComponent,
     MenuItemComponent,
-    /* ManageBannerComponent,
-    AddBannerComponent, */
+    ManageBannerComponent,
+    AddBannerComponent,
     SubmitReportsComponent,
     StatisticalReportsComponent,
     DocumentsLinksComponent,
@@ -42,8 +41,7 @@ import { BannerModule } from './modules/banner/banner.module';
     NoopAnimationsModule,
     MatMenuModule,
     HttpClientModule,
-    
-    BannerModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     TranslateModule.forRoot({
       loader: {

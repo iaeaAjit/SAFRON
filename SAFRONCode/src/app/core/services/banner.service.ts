@@ -4,14 +4,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {  Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
     
-import { Banner } from '../../modules/banner/banner';
+import { Banner } from '../../modules/banner';
      
 @Injectable({
   providedIn: 'root'
 })
 export class BannerService {
      
-  private apiURL = "API_URL";
+  private apiURL = "../assets/files/all_banner.json";
      
   httpOptions = {
     headers: new HttpHeaders({
@@ -21,36 +21,36 @@ export class BannerService {
    
   constructor(private httpClient: HttpClient) { }
      
-  getAll(): Observable {
+  getAll(): Observable<any> {
 
-    return this.httpClient.get(this.apiURL + '/banners/')
+    return this.httpClient.get(this.apiURL /* + '/banners/' */)
 
     .pipe(
       catchError(this.errorHandler)
     )
   }
      
-  create(banner:Banner): Observable {
+  create(banner:Banner): Observable<any> {
 
-    return this.httpClient.post(this.apiURL + '/banners/', JSON.stringify(banner), this.httpOptions)
+    return this.httpClient.post(this.apiURL /* + '/banners/' */, JSON.stringify(banner), this.httpOptions)
 
     .pipe(
       catchError(this.errorHandler)
     )
   }  
      
-  find(id:number): Observable {
+  find(id:number): Observable<any> {
 
-    return this.httpClient.get(this.apiURL + '/banners/' + id)
+    return this.httpClient.get(this.apiURL /* + '/banners/ '*/ + id)
 
     .pipe(
       catchError(this.errorHandler)
     )
   }
      
-  update(id:number, banner:Banner): Observable {
+  update(id:number, banner:Banner): Observable<any> {
 
-    return this.httpClient.put(this.apiURL + '/banners/' + id, JSON.stringify(banner), this.httpOptions)
+    return this.httpClient.put(this.apiURL /* + '/banners/' */ + id, JSON.stringify(banner), this.httpOptions)
 
     .pipe(
       catchError(this.errorHandler)
@@ -58,7 +58,7 @@ export class BannerService {
   }
      
   delete(id:number){
-    return this.httpClient.delete(this.apiURL + '/banners/' + id, this.httpOptions)
+    return this.httpClient.delete(this.apiURL /* + '/banners/' */ + id, this.httpOptions)
 
     .pipe(
       catchError(this.errorHandler)

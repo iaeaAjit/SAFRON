@@ -12,7 +12,28 @@
     "Register": "Register",
     "Safety Reporting and Learning": "Safety Reporting and Learning",
     "System for Radiotherapy": "System for Radiotherapy",
-	"Document_Details": "Document Details",
-	"Title" : "Title"
-
+    "Banner": {
+        "Banner_Lbl": "banner",
+        "Manage_Banner": "Manage Banner",
+        "Add_Banner": "Add Banner",
+        "Document_Details": "Document Details",
+        "Title": "Title",
+        "Treatment_Modality": "Treatment Modality",
+        "URL": "URL",
+        "Display_Order": "Display Order",
+        "Description": "Description",
+        "File": "File",
+        "Cancel": "Cancel",
+        "Save": "Save",
+        "Banner_Detail": "Provide Banner Details",
+        "Title_Req": "Title is required.",
+        "Enter_Modality": "Enter treatment modality here",
+        "Modality_Req": "Treatment Modality is required.",
+        "Url_Req": "URL is required.",
+        "Url_Invalid": "Please enter valid URL.",
+        "Order_Req": "Display Order is required.",
+        "Image_Size": "Image size should be in 245 X 138 pixels ratio",
+        "Save_Changs": "Tip: Do not forgot to save whenever you make changes to a page.",
+		"Action":"Action"
+    }
 }

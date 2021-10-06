@@ -1,63 +1,63 @@
 <div class="container">
     <div class="row">
-        <h5 class="text-center add-banner-title mt-4"><span class="text-capitalize"> {{action}} </span> {{'banner' | translate}}</h5>
-        <p class="text-center banner-p">Provide Banner Details</p>
+        <h5 class="text-center add-banner-title mt-4"><span class="text-capitalize"> {{action}} </span> {{'Banner.Banner_Lbl' | translate}}</h5>
+        <p class="text-center banner-p">{{'Banner.Banner_Detail' | translate}}</p>
     </div>
 
     <div class="panel p-3 shadow-sm mb-5 border-radius-5">
         <div class="panel-heading ps-3 pe-3"> 
-            <h5 class="panel-title">{{'Document_Details'  | translate }}</h5>
+            <h5 class="panel-title">{{'Banner.Document_Details'  | translate }}</h5>
         </div>
         <div class="panel-body p-3">
             <form [formGroup]="bannerForm">
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                         <div class="form-group mb-2">
-                            <label for="" class="form-label">{{'Title' | translate }}<strong class="text-danger">*</strong></label>
+                            <label for="" class="form-label">{{'Banner.Title' | translate }}<strong class="text-danger">*</strong></label>
                             <input type="text" name="" required id="" formControlName="title" placeholder="Enter document title here" class="form-control form-control-sm">
-                            <div *ngIf="bannerFormCtrl.title.invalid && bannerFormCtrl.title.touched && bannerFormCtrl.title.errors?.required">Title is required.</div>
+                            <div *ngIf="bannerFormCtrl.title.invalid && bannerFormCtrl.title.touched && bannerFormCtrl.title.errors?.required">{{'Banner.Title_Req' | translate}}</div>
                         </div>
-                        <div class="form-group mb-2">
-                        <label for="" class="form-label">{{'Treatment_Modality' | translate}} <strong class="text-danger">*</strong></label>
+                        <!-- <div class="form-group mb-2">
+                        <label for="" class="form-label">{{'Banner.Treatment_Modality' | translate}} <strong class="text-danger">*</strong></label>
                             <select required class="form-select form-select-sm" (change)="changeModality($event)" formControlName="modality">
-                                <option value="" disabled>Enter treatment modality here</option>
+                                <option value="" disabled>{{'Banner.Enter_Modality' | translate}}</option>
                                 <option *ngFor="let mod of trModality" [ngValue]="mod">{{mod}}</option>
                             </select>
-                            <div *ngIf="bannerFormCtrl.modality.invalid && bannerFormCtrl.modality.touched && bannerFormCtrl.modality.errors?.required">Treatment Modality is required.</div>
-                        </div>
+                            <div *ngIf="bannerFormCtrl.modality.invalid && bannerFormCtrl.modality.touched && bannerFormCtrl.modality.errors?.required">{{'Banner.Modality_Req' | translate}}</div>
+                        </div> -->
                         <div class="form-group mb-2">
-                            <label for="" class="form-label">{{'URL' | translate}} <strong class="text-danger">*</strong></label>
+                            <label for="" class="form-label">{{'Banner.URL' | translate}} <strong class="text-danger">*</strong></label>
                             <input type="text" accept=".jpg,.png,.pdf" name="" required id="" formControlName="url" placeholder="Enter document URL here" class="form-control form-control-sm">
-                            <div *ngIf="bannerFormCtrl.url.invalid && bannerFormCtrl.url.touched && bannerFormCtrl.url.errors?.required">URL is required.</div>
-                            <div *ngIf="bannerFormCtrl.url.errors?.pattern">Please enter valid URL.</div>
+                            <div *ngIf="bannerFormCtrl.url.invalid && bannerFormCtrl.url.touched && bannerFormCtrl.url.errors?.required">{{'Banner.Url_Req' | translate}}</div>
+                            <div *ngIf="bannerFormCtrl.url.errors?.pattern">{{'Banner.Url_Invalid' | translate}}</div>
                         </div>
                         <div class="form-group mb-2">
-                            <label for="" class="form-label">{{'Display_Order'  | translate }} <strong class="text-danger">*</strong></label>
+                            <label for="" class="form-label">{{'Banner.Display_Order'  | translate }} <strong class="text-danger">*</strong></label>
                             <input type="text" name="" required id="" formControlName="sortOrder" value="1" placeholder="Enter display order here" class="form-control form-control-sm">
-                            <div *ngIf="bannerFormCtrl.sortOrder.invalid && bannerFormCtrl.sortOrder.touched && bannerFormCtrl.sortOrder.errors?.required">Display Order is required.</div>
+                            <div *ngIf="bannerFormCtrl.sortOrder.invalid && bannerFormCtrl.sortOrder.touched && bannerFormCtrl.sortOrder.errors?.required">{{'Banner.Order_Req' | translate}}</div>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                         <div class="form-group mb-2">
-                            <label for="" class="form-label">{{'Description' | translate}}</label>
+                            <label for="" class="form-label">{{'Banner.Description' | translate}}</label>
                             <textarea name="" id="" class="form-control bannner-desc" formControlName="desc" cols="30" rows="3"></textarea>
                         </div>
                         <div class="form-group mb-2">
-                            <label for="" class="form-label w-100">{{'File' | translate}} </label>
+                            <label for="" class="form-label w-100">{{'Banner.File' | translate}} </label>
                             <input type="file" class="form-control border-light form-control-sm" (change)="onFileChange($event)" name="" id=""><strong class="text-danger">*</strong>
-                            <p class="text-secondary mt-2">Image size should be in 245 X 138 pixels ratio</p>
+                            <p class="text-secondary mt-2">{{'Banner.Image_Size' | translate}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <small>Tip: Do not forgot to save whenever you make changes to a page.</small>
+                    <small>{{'Banner.Save_Changs' | translate}}</small>
                 </div>
             </form>
         </div>
-        {{bannerForm.value | json}}
+        <!-- {{bannerForm.value | json}} -->
         <div class="panel-footer border-light p-3 justify-content-end border-top">
-            <a routerLink="/banner" class="btn btn-sm btn-light btn-rounded ms-2 float-end">Cancel</a>
-            <a (click)="onSubmit()" class="btn btn-sm btn-primary btn-rounded ms-2 float-end">Save</a>
+            <a routerLink="/banner" class="btn btn-sm btn-light btn-rounded ms-2 float-end">{{'Banner.Cancel' | translate}}</a>
+            <a (click)="onSubmit()" class="btn btn-sm btn-primary btn-rounded ms-2 float-end">{{'Banner.Save' | translate}}</a>
         </div>
     </div>
 </div>
