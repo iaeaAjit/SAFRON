@@ -1,5 +1,5 @@
 <div class="container">
-    <h5 class="text-center manage-banner-title mt-4">Manage Banner</h5>
+    <h5 class="text-center manage-banner-title mt-4">{{'Document_Details'  | translate }}Manage Banner</h5>
     <p class="text-center banner-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, dolore!</p>
 
     <div class="row justify-content-end pe-sm-3">
@@ -23,7 +23,7 @@
                     <td class="col-4">{{banner.Description}}</td>
                     <td class="col-auto text-center">{{banner.SortOrder}}</td>
                     <td class="col-2 text-center">
-                        <a routerLink="/banner/edit">
+                        <a routerLink="/banner/edit/" [queryParams]="{id: banner.Id}">
                             <span class="badge bg-action-icon rounded-pill m-2">
                                 <i class="fa fa-pencil-square-o text-primary icon-size"></i>
                             </span>

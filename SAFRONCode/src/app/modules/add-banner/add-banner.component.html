@@ -1,38 +1,50 @@
 <div class="container">
     <div class="row">
-        <h5 class="text-center add-banner-title mt-4"><span class="text-capitalize"> {{action}} </span> Banner</h5>
+        <h5 class="text-center add-banner-title mt-4"><span class="text-capitalize"> {{action}} </span> {{'banner' | translate}}</h5>
         <p class="text-center banner-p">Provide Banner Details</p>
     </div>
 
     <div class="panel p-3 shadow-sm mb-5 border-radius-5">
         <div class="panel-heading ps-3 pe-3"> 
-            <h5 class="panel-title">Document Details</h5>
+            <h5 class="panel-title">{{'Document_Details'  | translate }}</h5>
         </div>
         <div class="panel-body p-3">
-            <!-- <form action="" [formGroup]="formbanner">
+            <form [formGroup]="bannerForm">
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                         <div class="form-group mb-2">
-                            <label for="" class="form-label">Title <strong class="text-danger">*</strong></label>
+                            <label for="" class="form-label">{{'Title' | translate }}<strong class="text-danger">*</strong></label>
                             <input type="text" name="" required id="" formControlName="title" placeholder="Enter document title here" class="form-control form-control-sm">
+                            <div *ngIf="bannerFormCtrl.title.invalid && bannerFormCtrl.title.touched && bannerFormCtrl.title.errors?.required">Title is required.</div>
                         </div>
                         <div class="form-group mb-2">
-                            <label for="" class="form-label">URL <strong class="text-danger">*</strong></label>
-                            <input type="text" name="" required id="" formControlName="url" placeholder="Enter document URL here" class="form-control form-control-sm">
+                        <label for="" class="form-label">{{'Treatment_Modality' | translate}} <strong class="text-danger">*</strong></label>
+                            <select required class="form-select form-select-sm" (change)="changeModality($event)" formControlName="modality">
+                                <option value="" disabled>Enter treatment modality here</option>
+                                <option *ngFor="let mod of trModality" [ngValue]="mod">{{mod}}</option>
+                            </select>
+                            <div *ngIf="bannerFormCtrl.modality.invalid && bannerFormCtrl.modality.touched && bannerFormCtrl.modality.errors?.required">Treatment Modality is required.</div>
                         </div>
                         <div class="form-group mb-2">
-                            <label for="" class="form-label">Display Order <strong class="text-danger">*</strong></label>
-                            <input type="text" name="" required id="" formControlName="order" value="1" class="form-control form-control-sm">
+                            <label for="" class="form-label">{{'URL' | translate}} <strong class="text-danger">*</strong></label>
+                            <input type="text" accept=".jpg,.png,.pdf" name="" required id="" formControlName="url" placeholder="Enter document URL here" class="form-control form-control-sm">
+                            <div *ngIf="bannerFormCtrl.url.invalid && bannerFormCtrl.url.touched && bannerFormCtrl.url.errors?.required">URL is required.</div>
+                            <div *ngIf="bannerFormCtrl.url.errors?.pattern">Please enter valid URL.</div>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="" class="form-label">{{'Display_Order'  | translate }} <strong class="text-danger">*</strong></label>
+                            <input type="text" name="" required id="" formControlName="sortOrder" value="1" placeholder="Enter display order here" class="form-control form-control-sm">
+                            <div *ngIf="bannerFormCtrl.sortOrder.invalid && bannerFormCtrl.sortOrder.touched && bannerFormCtrl.sortOrder.errors?.required">Display Order is required.</div>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                         <div class="form-group mb-2">
-                            <label for="" class="form-label">Description</label>
+                            <label for="" class="form-label">{{'Description' | translate}}</label>
                             <textarea name="" id="" class="form-control bannner-desc" formControlName="desc" cols="30" rows="3"></textarea>
                         </div>
                         <div class="form-group mb-2">
-                            <label for="" class="form-label w-100">File <strong class="text-danger">*</strong></label>
-                            <input type="file" class="form-control border-light form-control-sm" name="" id="">
+                            <label for="" class="form-label w-100">{{'File' | translate}} </label>
+                            <input type="file" class="form-control border-light form-control-sm" (change)="onFileChange($event)" name="" id=""><strong class="text-danger">*</strong>
                             <p class="text-secondary mt-2">Image size should be in 245 X 138 pixels ratio</p>
                         </div>
                     </div>
@@ -40,11 +52,12 @@
                 <div class="row">
                     <small>Tip: Do not forgot to save whenever you make changes to a page.</small>
                 </div>
-            </form> -->
+            </form>
         </div>
+        {{bannerForm.value | json}}
         <div class="panel-footer border-light p-3 justify-content-end border-top">
             <a routerLink="/banner" class="btn btn-sm btn-light btn-rounded ms-2 float-end">Cancel</a>
-            <a class="btn btn-sm btn-primary btn-rounded ms-2 float-end">Save</a>
+            <a (click)="onSubmit()" class="btn btn-sm btn-primary btn-rounded ms-2 float-end">Save</a>
         </div>
     </div>
 </div>

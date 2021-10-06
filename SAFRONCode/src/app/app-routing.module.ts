@@ -8,6 +8,7 @@ import { SubmitReportsComponent } from './modules/submit-reports/submit-reports.
 import { StatisticalReportsComponent } from './modules/statistical-reports/statistical-reports.component';
 import { ProcessStepsComponent } from './modules/process-steps/process-steps.component';
 import { DocumentsLinksComponent } from './modules/documents-links/documents-links.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
     }
   },
   {
+    path: 'banner',
+    loadChildren: () => import('./modules/banner/banner.module').then(m => m.BannerModule)
+  },
+  /* {
     path: "banner",
     component: ManageBannerComponent,
     data: {
@@ -42,7 +47,7 @@ const routes: Routes = [
     data: {
       title: "Edit Banner page"
     }
-  },
+  }, */
   {
     path: "searchincident-report",
     component: SearchReportsComponent,
@@ -81,7 +86,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),
+  TranslateModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

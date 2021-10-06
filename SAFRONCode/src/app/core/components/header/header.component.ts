@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NavItem} from './nav-item';
+import { NavItem } from './nav-item';
 import { TranslateService } from '@ngx-translate/core';
+import { MultiLingualService } from '../../services/multi-lingual.service';
 
 @Component({
   selector: 'app-header',
@@ -9,58 +10,59 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  
 
-  // navItems: NavItem[] = [
-  //   {
-  //     displayName: 'Home | translate',
-  //     route: 'home'
-  //   },
-  //   {
-  //     displayName: 'Reports | translate',
-  //     children: [
-  //       {
-  //         displayName: 'Search Reports',
-  //         route:'searchincident-report'
-  //       },
-  //       {
-  //         displayName: 'Submit Reports',
-  //         route:''
-  //       }
-  //     ]
-  //   },
-  //   {
-  //     displayName: 'Documents & Links',
-  //     route: 'documents-links'
-  //   },
-  //   {
-  //     displayName: 'Process Steps',
-  //     route: 'process-steps'
-  //   },
-  //   {
-  //     displayName: 'Admin',
-  //     children: [
-  //       {
-  //         displayName: 'Manage Banner',
-  //         route:''
-  //       },
-  //       {
-  //         displayName: 'Manage Latest Updates',
-  //         route:''
-  //       },
-  //       {
-  //         displayName: 'Manage Featured Reports',
-  //         route: ''
-  //       }
-  //     ]
-  //   },
-  //   {
-  //     displayName: 'Help',
-  //     route: ''
-  //   },
-  // ];
 
-  constructor(public translate: TranslateService) { 
+  /* navItems: NavItem[] = [
+    {
+      displayName: 'Home',
+      route: 'home'
+    },
+    {
+      displayName: 'Reports',
+      children: [
+        {
+          displayName: 'Search Reports',
+          route:'searchincident-report'
+        },
+        {
+          displayName: 'Submit Reports',
+          route:''
+        }
+      ]
+    },
+    {
+      displayName: 'Documents & Links',
+      route: 'documents-links'
+    },
+    {
+      displayName: 'Process Steps',
+      route: 'process-steps'
+    },
+    {
+      displayName: 'Admin',
+      children: [
+        {
+          displayName: 'Manage Banner',
+          route:'banner'
+        },
+        {
+          displayName: 'Manage Latest Updates',
+          route:''
+        },
+        {
+          displayName: 'Manage Featured Reports',
+          route: ''
+        }
+      ]
+    },
+    {
+      displayName: 'Help',
+      route: ''
+    },
+  ]; */
+
+  constructor(public translate: TranslateService,
+    private _MultiLingualService: MultiLingualService) {
     translate.addLangs(['en', 'es']);
     translate.setDefaultLang('en');
     translate.use('en');
@@ -68,8 +70,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
-  onLangChange(lang:any){
+
+  onLangChange(lang: any) {
+    console.log(lang)
+    this._MultiLingualService.changeLocale(lang);
     this.translate.use(lang);
   }
 
