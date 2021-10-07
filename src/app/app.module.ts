@@ -16,6 +16,9 @@ import { DocumentsLinksComponent } from './modules/documents-links/documents-lin
 import { ProcessStepsComponent } from './modules/process-steps/process-steps.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MatTreeModule} from '@angular/material/tree';
+import { MatIconModule} from '@angular/material/icon';
+import { TreeModule } from 'ng2-tree';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     NoopAnimationsModule,
     MatMenuModule,
     HttpClientModule,
+    MatTreeModule,
+    MatIconModule,
+    TreeModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -44,6 +50,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     })
   ],
   providers: [],
+  entryComponents:[ProcessStepsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,139 @@
-<p>process-steps works!</p>
+<div class="container">
+    <h5 class="text-center process-step-title mt-4">Browse Process Steps</h5>
+    <p class="text-center process-step-p">You can view all the process steps for a selected treatment modality</p>
+    <div class="row">
+        <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, totam.</p>
+        <div class="col-6 mb-3">
+            <label for="" class="mb-2"><strong>Treatment modality</strong></label>
+            <select name="" class="form-select form-select-sm w-100" id="">
+                <option value="">External beam radiotherapy</option>
+            </select>
+        </div>
+    </div>
+    <div class="panel shadow-sm">
+        <div class="panel-body p-4">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="non-clinical-tab" data-bs-toggle="tab" data-bs-target="#non-clinical" type="button"
+                        role="tab" aria-controls="non-clinical" aria-selected="true">1. Non-clinical phase</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pre-treatment-tab" data-bs-toggle="tab" data-bs-target="#pre-treatment" type="button"
+                        role="tab" aria-controls="pre-treatment" aria-selected="false">2. Pre-treatment phase</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="treatment-tab" data-bs-toggle="tab" data-bs-target="#treatment" type="button"
+                        role="tab" aria-controls="treatment" aria-selected="false">3. Treatment phase</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="unknown-tab" data-bs-toggle="tab" data-bs-target="#unknown" type="button"
+                        role="tab" aria-controls="unknown" aria-selected="false">4. Unknown</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="non-clinical" role="tabpanel" aria-labelledby="non-clinical-tab">
+                    <div class="row p-3">
+                        <!-- <button (click)="tree.treeControl.collapseAll()">collapseAll</button>
+    <button (click)="tree.treeControl.expandAll()">expandAll</button>
+                        <mat-tree #tree [dataSource]="dataSource" [treeControl]="treeControl">
+                            <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                                <a mat-icon-button disabled  class="cursor-pointer" href="/process-steps-details">
+                                    {{node.name}}
+                                </a>
+                            </mat-tree-node>
+                            <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+                                <a mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name" class="cursor-pointer">
+                                    <mat-icon class="mat-icon-rtl-mirror mat-icon-color me-1 mat-position">
+                                    {{treeControl.isExpanded(node) ? 'indeterminate_check_box' : 'chevron_right'}}
+                                    </mat-icon>
+                                    {{node.name}}
+                                </a>
+                            </mat-tree-node>
+                          </mat-tree> -->
+                          <tree [tree]="tree"></tree>
+                          <!-- <mat-tree #tree [dataSource]="dataSource" [treeControl]="treeControl">
+                            <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
+                              <button mat-icon-button disabled></button>
+                              {{node.name}} : {{node.name}}
+                            </mat-tree-node>
+                          
+                            <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+                              <button mat-icon-button matTreeNodeToggle
+                                      [attr.aria-label]="'toggle ' + node.name">
+                                <mat-icon class="mat-icon-rtl-mirror">
+                                  {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                                </mat-icon>
+                              </button>
+                              {{node.name}} : {{node.name}}
+                            </mat-tree-node>
+                          </mat-tree> -->
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pre-treatment" role="tabpanel" aria-labelledby="pre-treatment-tab">
+                    <div class="row p-3">
+                        <tree [tree]="tree1"></tree>
+                        <!-- <mat-tree [dataSource]="dataSource1" [treeControl]="treeControl">
+                            <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                                <a mat-icon-button disabled  class="cursor-pointer" href="/process-steps-details">
+                                    {{node.name}}
+                                </a>
+                            </mat-tree-node>
+                            <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+                                <a mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name" class="cursor-pointer">
+                                    <mat-icon class="mat-icon-rtl-mirror mat-icon-color me-1 mat-position">
+                                    {{treeControl.isExpanded(node) ? 'indeterminate_check_box' : 'chevron_right'}}
+                                    </mat-icon>
+                                    {{node.name}}
+                                </a>
+                            </mat-tree-node>
+                          </mat-tree> -->
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="treatment" role="tabpanel" aria-labelledby="treatment-tab">
+                    <div class="row p-3">
+                        <tree [tree]="tree2"></tree>
+                        <!-- <mat-tree [dataSource]="dataSource2" [treeControl]="treeControl">
+                            <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                                <a mat-icon-button disabled  class="cursor-pointer" href="/process-steps-details">
+                                    {{node.name}}
+                                </a>
+                            </mat-tree-node>
+                            <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+                                <a mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name" class="cursor-pointer">
+                                    <mat-icon class="mat-icon-rtl-mirror mat-icon-color me-1 mat-position">
+                                    {{treeControl.isExpanded(node) ? 'indeterminate_check_box' : 'chevron_right'}}
+                                    </mat-icon>
+                                    {{node.name}}
+                                </a>
+                            </mat-tree-node>
+                          </mat-tree> -->
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="unknown" role="tabpanel" aria-labelledby="unknown-tab">
+                    <div class="row p-3">
+                        <tree [tree]="tree3"></tree>
+                        <!-- <mat-tree [dataSource]="dataSource3" [treeControl]="treeControl">
+                            <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                                <a mat-icon-button disabled  class="cursor-pointer" href="/process-steps-details">
+                                    {{node.name}}
+                                </a>
+                            </mat-tree-node>
+                            <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+                                <a mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name" class="cursor-pointer">
+                                    <mat-icon class="mat-icon-rtl-mirror mat-icon-color me-1 mat-position">
+                                    {{treeControl.isExpanded(node) ? 'indeterminate_check_box' : 'chevron_right'}}
+                                    </mat-icon>
+                                    {{node.name}}
+                                </a>
+                            </mat-tree-node>
+                          </mat-tree> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- <app-breadcrumb></app-breadcrumb> -->

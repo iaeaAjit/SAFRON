@@ -121,6 +121,13 @@
     background: #6C9BFC 0% 0% no-repeat padding-box; 
     padding: 11px;
 }
+.dropdown-item:hover {
+    color: #555555;
+    background-color: #DEEAFE;
+}
+.dropdown-menu {
+    margin-top: 0px;
+}
 
 
 

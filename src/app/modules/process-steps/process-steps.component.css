@@ -1,0 +1,53 @@
+.process-step-title{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #3366CC;
+    opacity: 1;
+}
+.process-step-p{
+    text-align: center;
+    /* font: normal normal normal 19px/23px Helvetica Neue; */
+    letter-spacing: 0px;
+    color: #4B4B4B;
+    opacity: 1;
+    font-size: large;
+}
+.panel-border-radius{
+    border-radius: 5px;
+}
+
+.nav-tabs .nav-link.active {
+    border:0px;
+    color: #3366CC;
+    font-weight: bold;
+    border-bottom: 3px solid #3366CC;
+}
+.nav-tabs .nav-link{
+    border: 0px solid transparent;
+}
+.nav-link {
+    color:#c1c1c1;
+}
+.nav-link:hover {
+    border-color: transparent transparent transparent;
+    isolation: isolate;
+}
+
+
+/* treview css starts */
+.mat-icon-color {
+    color:#d3cfcf;
+}
+.cursor-pointer{
+    cursor: pointer;
+    color: #292929;
+}
+.mat-position{
+    position: relative;
+    top: 5px;
+}
+
+
+/* tree view css ends */

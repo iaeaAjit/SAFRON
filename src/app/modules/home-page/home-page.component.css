@@ -1,6 +1,7 @@
 /* Banner CSS */
 
 
+
 .slider-section{
     background: transparent linear-gradient(180deg, #3366CC 0%, #517DD4 100%) 0% 0% no-repeat padding-box;
     opacity: 1; 
@@ -8,16 +9,13 @@
 }
 
 .img-bg-one{
-    /* background: transparent url('/assets/images/Group 135.png') 0% 0% no-repeat padding-box; */
-    background: transparent url('/assets/images/Banner-bg.png');
-    opacity: 0.2; 
     position: absolute;
-    left: 0px;
     width: 100%;
-    height: 420px; z-index:-1;
+    height: 440px;
+    z-index: 900;
+    object-fit: cover;
 }
 .img-bg-two{
-    background: transparent url('/assets/images/Group 1034.png') 0% 0% no-repeat padding-box;
     opacity: 0.2; 
     position: absolute;
     left: 0px;
@@ -62,10 +60,15 @@
     border-radius: 20px !important;
 }
 .slider-padding{
-   height:60%;
+   height:50%;
 }
 .carousel-height{
     height: 350px;
+    z-index: 991;
+}
+.carousel-heading{
+    font-size: 38px;
+    font-weight: bold;
 }
 
 /* Quick action CSS */
